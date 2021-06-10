@@ -30,7 +30,7 @@ functions:
     handler: src/functions/newTodo.handle
     events:
       - http:
-          path: /newTodo/{user_id}
+          path: /todos/{user_id}
           method: POST
           cors: true
 
@@ -38,7 +38,7 @@ functions:
     handler: src/functions/listTodos.handle
     events:
       - http:
-          path: /listTodos/{user_id}
+          path: /todos/{user_id}
           method: GET
           cors: true
 
