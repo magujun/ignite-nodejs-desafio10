@@ -15,7 +15,7 @@ export const handle: APIGatewayProxyHandler = async (
 	event,
 ) => {
 	const { user_id } = event.pathParameters;
-	const { title, deadline } = JSON.parse(
+	const { title, deadline, id } = JSON.parse(
 		event.body,
 	) as ITodo;
 	const deadlineDate = dayjs(deadline).format('YYYY-MM-DD');
@@ -24,11 +24,11 @@ export const handle: APIGatewayProxyHandler = async (
 		.put({
 			TableName: 'todos',
 			Item: {
-				id: uuidV4(),
+				id: id ? id : uuidV4(),
 				user_id,
 				title,
 				done: false,
-				deadline: new Date(deadlineDate),
+				deadline: deadlineDate,
 			},
 		})
 		.promise();
