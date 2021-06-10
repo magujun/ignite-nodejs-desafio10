@@ -27,8 +27,9 @@
       user_id: 988507c0-0f99-4f3a-ad8e-63385cecee1a
   response:
     body:
-      id: 7c71a3b3-e14b-410f-8461-f458df6c8797
-      title: Upload Ignite NodeJS Trail Challenge 10
-      deadline: '2021-06-10'
-      user_id: 988507c0-0f99-4f3a-ad8e-63385cecee1a
-      done: false
+      - todos:
+          id: 7c71a3b3-e14b-410f-8461-f458df6c8797
+          title: Upload Ignite NodeJS Trail Challenge 10
+          deadline: '2021-06-10'
+          user_id: 988507c0-0f99-4f3a-ad8e-63385cecee1a
+          done: false

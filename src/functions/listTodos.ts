@@ -23,7 +23,6 @@ export const handle: APIGatewayProxyHandler = async (
 		return {
 			statusCode: 200,
 			body: JSON.stringify({
-				message: `Todo list for user ${user_id}`,
 				todos: userTodos,
 			}),
 			headers: {
